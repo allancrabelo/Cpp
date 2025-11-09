@@ -11,12 +11,10 @@ int main(int argc, char **argv)
 		{
 			for (int j = 0; argv[i][j]; j++)
 			{
-				if (isspace(argv[i][j]))
-					i++;
 				std::cout << (char)toupper(argv[i][j]);
 			}
 			if (i < argc - 1)
-				std::cout << "%";
+				std::cout << " ";
 		}
 		std::cout << "\n";
 	}
