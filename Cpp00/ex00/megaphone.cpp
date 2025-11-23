@@ -6,7 +6,7 @@
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 07:32:52 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/12 07:35:56 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/11/12 08:06:18 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	main(int argc, char **argv)
 {
 	if (argc == 1)
 	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return 0;
+		std::cerr << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+		return (EXIT_FAILURE);
 	}
 	bool first = true;
 	for (int i = 1; i < argc; i++)
@@ -42,5 +42,5 @@ int	main(int argc, char **argv)
 		}
 	}
 	std::cout << std::endl;
-	return 0;
+	return (EXIT_SUCCESS);
 }
