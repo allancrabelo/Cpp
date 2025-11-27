@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: aaugusto | mqueiros < minishell >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 07:52:50 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/12 10:16:25 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/11/27 18:29:54 by aaugusto |       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef MAIN_HPP
+# define MAIN_HPP
 
 // Libraries
-#include <cstdlib>
-#include <iostream>
-#include <string>
-#include <csignal>
-#include <iostream>
-#include <unistd.h>
-#include <cstdlib>
-#include "colors.hpp"
+# include <cstdlib>
+# include <iostream>
+# include <string>
+# include <csignal>
+# include <iostream>
+# include <unistd.h>
+# include <cstdlib>
 
-// Contacts
-void	add_contacts(std::string &input);
+# include "colors.hpp"
+# include "contact .hpp"
 
 #endif

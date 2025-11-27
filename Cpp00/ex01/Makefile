@@ -1,7 +1,7 @@
 C++ = c++
 C++FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-SRC = phonebook.cpp \
-		contacts.cpp \
+SRC = main.cpp \
+		contact.cpp \
 
 OBJS = $(SRC:.cpp=.o)
 
