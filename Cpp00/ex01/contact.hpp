@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact .hpp                                       :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugusto | mqueiros < minishell >          +#+  +:+       +#+        */
+/*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 17:54:37 by aaugusto |        #+#    #+#             */
-/*   Updated: 2025/11/27 18:12:53 by aaugusto |       ###   ########.fr       */
+/*   Updated: 2025/11/30 17:16:00 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define CONTACT_HPP
 
 // Includes
-#include <iostream> // string
-#include <ctime> // time_t
+#include <iostream>
+#include <iomanip>
 
 // Classes
-class Contact 
+class Contact
 {
 	private:
 		std::string	_Name;
@@ -33,12 +33,12 @@ class Contact
 				std::string phone_number, std::string darkest_secret);
 		~Contact ();
 
-		std::string getName() const;
-		std::string getLastName() const;
-		std::string getNickName() const;
-		std::string getPhoneNumber() const;
-		time_t getCreated() const;
-		std::string getSecret() const;
+		std::string	getName() const;
+		std::string	getLastName() const;
+		std::string	getNickName() const;
+		std::string	getPhoneNumber() const;
+		time_t		getCreated() const;
+		std::string	getSecret() const;
 };
 
 #endif

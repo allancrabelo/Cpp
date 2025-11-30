@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.hpp                                           :+:      :+:    :+:   */
+/*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 07:52:50 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/30 17:23:30 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/11/30 17:14:31 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_HPP
-# define MAIN_HPP
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-// Libraries
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include <ctime>
-#include <limits>
-
-# include "colors.hpp"
+// Includes
+# include <iostream>
+# include <string>
+# include <iomanip>
+# include <ctime>
 # include "contact.hpp"
-# include "phonebook.hpp"
 
 // Defines
-# define FIRST_NAME 0
-# define LAST_NAME 1
-# define NICKNAME 2
-# define PHONE_NUMBER 3
-# define SECRET 4
-# define PARSER_ERROR "[INPUT ERROR] Invalid input. Please try again."
+# define MAX_CONTACTS 8
 
-void	contactAdder(Phonebook *Phonebook);
+class Phonebook
+{
+	private:
+		int	_NumInput;
+	public:
+		Contact contacts[MAX_CONTACTS];
+		Phonebook();
+		~Phonebook();
+
+		//Methods
+		int	getNumInput();
+};
+
 #endif
