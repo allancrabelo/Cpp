@@ -6,7 +6,7 @@
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 07:52:50 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/30 23:55:15 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/12/01 08:47:24 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,7 @@
 # define PARSER_ERROR "[INPUT ERROR] Invalid input. Please try again."
 
 void	contactAdder(Phonebook *Phonebook);
+void	searchContact(Phonebook *Phonebook);
+void	bannerPrinter(void);
+
 #endif

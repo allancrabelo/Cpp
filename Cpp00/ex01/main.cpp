@@ -6,7 +6,7 @@
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 15:35:06 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/30 23:56:06 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/12/01 09:07:21 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,24 @@ void inputNormalizer(std::string &input)
 /**
  * @brief Main function of the PhoneBook application.
  * 
- * @details This function initializes the PhoneBook application,
- * displays a banner, and enters a command loop to process user input.
- * It recognizes the "EXIT" command to terminate the application.
- * If the command is not recognized, it informs the user.
- * @param argc 
- * @param argv 
- * @return * int 
+ * @details This function initializes a Phonebook object and manages
+ * the command loop for user interaction. It first checks if the program
+ * was executed with the correct number of arguments. If not, it prints
+ * a usage error and exits with failure.
+ * 
+ * The function prints a banner and then enters an infinite loop to
+ * process user commands. Supported commands are:
+ * - "ADD": adds a new contact
+ * - "SEARCH": searches existing contacts
+ * - "EXIT": exits the application
+ * 
+ * If the command is not recognized, it informs the user and continues
+ * the loop. The loop also terminates if end-of-input is detected.
+ * 
+ * @param argc Number of command-line arguments.
+ * @param argv Array of command-line argument strings.
+ * @return int Returns EXIT_SUCCESS on normal termination,
+ * or EXIT_FAILURE if the program is run with incorrect arguments.
  */
 int	main(int argc, char **argv)
 {
@@ -79,7 +90,7 @@ int	main(int argc, char **argv)
 			else if (input == "ADD")
 				contactAdder(&Phonebook);
 			else if (input == "SEARCH")
-				std::cout << GREEN "[INFO] SEARCH command recognized. (Functionality not implemented yet)" RESET << std::endl;
+				searchContact(&Phonebook);
 			else if (input == "EXIT")
 			{
 				std::cout << CYAN "Exiting PhoneBook. Goodbye!" RESET << std::endl;

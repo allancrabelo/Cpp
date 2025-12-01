@@ -6,7 +6,7 @@
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 07:52:50 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/30 17:14:31 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/12/01 08:45:09 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ class Phonebook
 		~Phonebook();
 
 		//Methods
-		int	getNumInput();
+		void	addContactToPhonebook(std::string Name, std::string LastName, std::string Nickname, std::string PhoneNumber, std::string Secret);
+		int		getNumInput();
 };
 
 #endif
