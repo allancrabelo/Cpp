@@ -30,7 +30,7 @@ valgrind: $(NAME)
 
 credit:
 	@echo " =================================================="
-	@echo "     PhoneBook - C++ Project (CPP00)
+	@echo "     PhoneBook - C++ Project (CPP00)"
 	@echo " =================================================="
 	@echo " Developer: Allan Rabelo - Fullstack Developer"
 	@echo " Institution: 42 School® Porto - 2025"

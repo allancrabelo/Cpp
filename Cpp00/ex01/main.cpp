@@ -6,7 +6,7 @@
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 15:35:06 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/12/01 09:07:21 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/12/01 19:10:43 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,16 @@ void bannerPrinter(void)
  *
  * @param input The input string to be normalized.
  */
-void inputNormalizer(std::string &input)
-{
-	for (size_t i = 0; i < input.length(); i++)
-		input[i] = std::toupper(input[i]);
+void inputNormalizer(std::string &input) {
+	while (!input.empty() && std::isspace((unsigned char)input[0])) {
+		input.erase(0, 1);
+	}
+	while (!input.empty() && std::isspace((unsigned char)input[input.size() - 1])) {
+		input.erase(input.size() - 1, 1);
+	}
+	for (std::string::size_type i = 0; i < input.size(); ++i) {
+		input[i] = std::toupper((unsigned char)input[i]);
+	}
 }
 
 /**
@@ -76,6 +82,7 @@ int	main(int argc, char **argv)
 	{
 		std::string input;
 		bannerPrinter();
+		std::cerr << BOLD_CYAN "Try Commands: 'ADD', 'SEARCH' and 'EXIT'" RESET << std::endl;
 		while (1)
 		{
 			std::cout << "Enter command: ";
