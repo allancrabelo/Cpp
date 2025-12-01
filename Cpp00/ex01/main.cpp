@@ -6,7 +6,7 @@
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 15:35:06 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/30 16:57:38 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:56:06 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	main(int argc, char **argv)
 	(void)argv;
 	if (argc != 1)
 	{
-		std::cerr << "[USAGE ERROR] ./phonebook" << std::endl;
+		std::cerr << BOLD_RED "[USAGE ERROR] ./phonebook" RESET << std::endl;
 		return (EXIT_FAILURE);
 	}
 	else

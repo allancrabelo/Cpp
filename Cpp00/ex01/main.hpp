@@ -6,7 +6,7 @@
 /*   By: aaugusto <aaugusto@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 07:52:50 by aaugusto          #+#    #+#             */
-/*   Updated: 2025/11/30 17:23:30 by aaugusto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:55:15 by aaugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 # define MAIN_HPP
 
 // Libraries
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include <ctime>
-#include <limits>
+# include <iostream>
+# include <string>
+# include <iomanip>
+# include <ctime>
+# include <limits>
+# include <cstdlib>
 
 # include "colors.hpp"
 # include "contact.hpp"
