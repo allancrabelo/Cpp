@@ -5,7 +5,7 @@ This repo tracks my evolution as a C++ dev, from rookie scripts to hardcore obje
 
 ## About the 42 CPP Modules
 
-CPP Modules at 42 School isn’t just a course—it’s a warzone for mastering C++. Through these modules, you’ll conquer:
+CPP Modules at 42 School isn’t just a course, it’s a warzone for mastering C++. Through these modules, you’ll conquer:
 ```
 - Data structures and object manipulation
 - Inheritance, polymorphism, encapsulation
