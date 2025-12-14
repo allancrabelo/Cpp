@@ -73,3 +73,4 @@ void	Phonebook::addContactToPhonebook(std::string Name, std::string LastName, st
 	else
 		contacts[search_oldest_entry(contacts)] = Contact(Name, LastName, Nickname, PhoneNumber, Secret);
 }
+
