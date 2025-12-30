@@ -1,9 +1,10 @@
 #ifndef HUMANA_HPP
-#define HUMANA_HPP
+# define HUMANA_HPP
 
 // Includes:
-#include "Weapon.hpp"
-#include <string>
+# include "Weapon.hpp"
+# include <string>
+# include <iostream>
 
 // Class:
 class HumanA
@@ -14,6 +15,7 @@ class HumanA
 
 	public:
 		HumanA(std::string Name, Weapon &NewWeapon);
+		~HumanA(void);
 
 		void	attack(void);
 };
