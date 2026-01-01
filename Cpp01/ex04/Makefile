@@ -1,6 +1,6 @@
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-SRC = main.cpp parser.cpp
+SRC = main.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
