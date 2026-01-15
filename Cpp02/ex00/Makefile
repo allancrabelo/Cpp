@@ -4,7 +4,7 @@ SRC = main.cpp Fixed.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
-NAME = Fixed
+NAME = a.out
 
 all: $(NAME)
 
