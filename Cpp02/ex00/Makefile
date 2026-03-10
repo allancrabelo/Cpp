@@ -1,19 +1,19 @@
-CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+C++ = c++
+C++FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 SRC = main.cpp Fixed.cpp
 
 OBJS = $(SRC:.cpp=.o)
 
-NAME = a.out
+NAME = Fixed
 
 all: $(NAME)
 
 $(NAME):$(OBJS)
-	@$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	@$(C++) $(C++FLAGS) $(OBJS) -o $(NAME)
 	@echo "\033[0;32m [✔] \033[0m Built $(NAME)"
 
 %.o: %.cpp
-	$(CPP) $(CPPFLAGS) -c $< -o $@
+	$(C++) $(C++FLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJS)
@@ -26,5 +26,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
-.SILENT:

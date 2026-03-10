@@ -6,24 +6,13 @@ Fixed::Fixed(void)
 	_value = 0;
 }
 
-Fixed::~Fixed(void)
-{
-	std::cout << "Destructor called" << std::endl;
-}
-
 Fixed::Fixed(const Fixed &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	_value = copy.getRawBits();
 }
 
-int	Fixed::getRawBits(void) const
-{
-	std::cout << "getRawBits member function called" << std::endl;
-	return (_value);
-}
-
-Fixed	&Fixed::operator=(const Fixed &copy)
+Fixed &Fixed::operator=(const Fixed &copy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy)
@@ -33,8 +22,18 @@ Fixed	&Fixed::operator=(const Fixed &copy)
 	return (*this);
 }
 
+Fixed::~Fixed(void)
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
+int	Fixed::getRawBits(void) const
+{
+	std::cout << "getRawBits member function called" << std::endl;
+	return (_value);
+}
+
 void	Fixed::setRawBits(int const raw)
 {
 	_value = raw;
 }
-
