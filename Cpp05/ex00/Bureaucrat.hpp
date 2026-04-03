@@ -12,13 +12,13 @@ class		Bureaucrat
 		int					_grade;// [1 - Highest ~ 150 - Lowest]
 	public:
 		Bureaucrat(); // Default Constructor
-		Bureaucrat(const std::strig name, int grade); // Named Constructor
+		Bureaucrat(const std::string name, int grade); // Named Constructor
 		Bureaucrat(const Bureaucrat &copy); // Copy Constructor
 		Bureaucrat &operator=(const Bureaucrat &copy); // Copy Assignment Constructor
 		~Bureaucrat(); // Destructor
 
 	// [ Expeptions ]:
-	class	GradeTooHighException : public	std::exeption
+	class	GradeTooHighException : public	std::exception
 	{
 		public:
 			virtual const char* what() const throw()
@@ -27,7 +27,7 @@ class		Bureaucrat
 			}	
 	};
 
-	class	GradeTooLowException : public std::exeption
+	class	GradeTooLowException : public std::exception
 	{
 		public:
 			virtual	const char* what() const throw()
