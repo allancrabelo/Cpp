@@ -1,28 +1,20 @@
 #include "ScalarConverter.hpp"
 
 // Canonical form
-ScalarConverter::ScalarConverter()
-{
-    std::cout << "ScalarConverter constructor called" << std::endl;
-}
+ScalarConverter::ScalarConverter() {}
 
 ScalarConverter::ScalarConverter(const ScalarConverter &copy)
 {
-    std::cout << "ScalarConverter copy constructor called" << std::endl;
     (void)copy;
 }
 
 ScalarConverter &ScalarConverter::operator=(const ScalarConverter &copy)
 {
-    std::cout << "ScalarConverter assignment operator called" << std::endl;
     (void)copy;
     return *this;
 }
 
-ScalarConverter::~ScalarConverter()
-{
-    std::cout << "ScalarConverter destructor called" << std::endl;
-}
+ScalarConverter::~ScalarConverter() {}
 
 // Public member functions
 int ScalarConverter::charVerificator(std::string literal)
@@ -120,7 +112,7 @@ void    ScalarConverter::charConverter(std::string literal)
 
 void    ScalarConverter::floatConverter(std::string literal)
 {
-    float f = std::stof(literal);
+    float f = static_cast<float>(std::strtod(literal.c_str(), NULL));
     std::cout << "float: " << f << "f" << std::endl;
 
     int i = static_cast<int>(f);
@@ -138,7 +130,7 @@ void    ScalarConverter::floatConverter(std::string literal)
 
 void    ScalarConverter::doubleConverter(std::string literal)
 {
-    double d = std::stod(literal);
+    double d = std::strtod(literal.c_str(), NULL);
     std::cout << "double: " << d << std::endl;
 
     int i = static_cast<int>(d);
@@ -156,7 +148,7 @@ void    ScalarConverter::doubleConverter(std::string literal)
 
 void   ScalarConverter::intConverter(std::string literal)
 {
-    int i = std::stoi(literal);
+    int i = std::strtol(literal.c_str(), NULL, 10);
     std::cout << "int: " << i << std::endl;
 
     char c = static_cast<char>(i);
@@ -196,7 +188,6 @@ void   ScalarConverter::nanOrInfConverter(std::string literal)
         std::cout << "double: -inf" << std::endl;
     }
 }
-
 void ScalarConverter::convert(std::string literal)
 {
     ScalarConverter converter;
