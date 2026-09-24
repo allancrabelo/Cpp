@@ -6,20 +6,23 @@ int main(void)
     data.str = "Hello, World!";
     data.num = 42;
 
-    std::cout << "Original Data: " << data.str << " | " << data.num << std::endl;
+    std::cout << "Data Pointer: " << &data << std::endl;
 
-    uintptr_t raw = Serializer::serialize(&data);
-    std::cout << "Serialized Data (uintptr_t): " << raw << std::endl;
+    uintptr_t ptr = Serializer::serialize(&data);
 
-    Data* deserializedData = Serializer::deserialize(raw);
-    std::cout << "Deserialized Data: " << deserializedData->str << " | " << deserializedData->num << std::endl;
+    std::cout << "Serialized value: " << ptr << std::endl;
 
-    if (deserializedData == &data) {
-        std::cout << "Deserialization successful: The deserialized pointer matches the original." << std::endl;
-    } 
-    else {
-        std::cout << "Deserialization failed: The deserialized pointer does not match the original." << std::endl;
+    Data *deserialized = Serializer::deserialize(&data);
+
+    if (deserialized == &data)
+    {
+		std::cout << "Serialization working properly!" << std::endl;
+    }
+	else
+    {
+		std::cout << "Serialization failed!" << std::endl;
     }
 
+	std::cout << "Number: " << deserialized->num << ", String: " << deserialized->str << std::endl;
     return (0);
 }

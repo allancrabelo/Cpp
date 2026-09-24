@@ -3,8 +3,10 @@
 
 # include <iostream>
 
-class Data {
-
+struct Data
+{
     std::string str;
     int         num;
 };
+
+#endif
