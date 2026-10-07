@@ -8,7 +8,7 @@ Serializer::Serializer()
 Serializer::Serializer(const Serializer &copy)
 {
     std::cout << "Serializer copy constructor called" << std::endl;
-    *this = copy;
+    (void)copy;
 }
 
 Serializer &Serializer::operator=(const Serializer &copy)

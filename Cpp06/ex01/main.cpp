@@ -1,10 +1,10 @@
-#include "Data.hpp"
+#include "Serializer.hpp"
 
 int main(void)
 {
     Data data;
-    data.str = "Hello, World!";
     data.num = 42;
+    data.str = "Hello, World!";
 
     std::cout << "Data Pointer: " << &data << std::endl;
 
@@ -12,7 +12,7 @@ int main(void)
 
     std::cout << "Serialized value: " << ptr << std::endl;
 
-    Data *deserialized = Serializer::deserialize(&data);
+    Data *deserialized = Serializer::deserialize(ptr);
 
     if (deserialized == &data)
     {
